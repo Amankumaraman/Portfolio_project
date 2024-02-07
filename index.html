@@ -1,397 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Custom Dark-Neon Theme -->
-    <style>
-        /* Custom CSS styles here */
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0f0f23;
-            color: #ffffff;
-        }
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo-container">
+            <img
+              src="./images/WhatsApp Image 2023-07-09 at 12.11.18 AM.jpeg"
+              class="logo"
+            />
+            <div class="logo-text">man Kumar</div>
+          </div>
 
-        /* Navbar */
-        .navbar {
-            background-color: #0f0f23 !important;
-        }
-
-        .navbar-brand, .navbar-nav .nav-link {
-            color: #ffffff !important;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .hero-heading {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .hero-description {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            color: #ffffff;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 100px 0;
-            background-color: #1c1c36;
-        }
-
-        .about-heading {
-            font-size: 3rem;
-            color: #ffffff;
-            margin-bottom: 30px;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            color: #ffffff;
-            margin-bottom: 30px;
-        }
-
-        /* Skills List */
-        .skills-list {
-            list-style: none;
-            padding: 0;
-            font-size: 1.1rem;
-            color: #ffffff;
-        }
-
-        .skills-list li {
-            margin-bottom: 10px;
-        }
-
-        /* Projects Section */
-        .project-section {
-            padding: 100px 0;
-            background-color: #1c1c36;
-        }
-
-        .project-heading {
-            font-size: 3rem;
-            color: #ffffff;
-            margin-bottom: 40px;
-        }
-
-        .project-card {
-            background-color: #2d2d4d;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-
-        .project-card img {
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .project-description {
-            font-size: 1.1rem;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-
-        .project-link {
-            color: #8080ff;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .project-link:hover {
-            color: #6666ff;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 100px 0;
-            background-color: #0f0f23;
-        }
-
-        .contact-heading {
-            font-size: 3rem;
-            color: #ffffff;
-            margin-bottom: 30px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            background-color: #2d2d4d;
-            border: none;
-            border-radius: 5px;
-            color: #ffffff;
-            padding: 15px;
-            margin-bottom: 20px;
-            width: 100%;
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            background-color: #1c1c36;
-            outline: none;
-        }
-
-        .contact-form textarea {
-            resize: none;
-            height: 150px;
-        }
-
-        .contact-form button {
-            background-color: #8080ff;
-            border: none;
-            border-radius: 5px;
-            color: #ffffff;
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-form button:hover {
-            background-color: #6666ff;
-        }
-
-        /* Footer Section */
-        .footer-section {
-            padding: 50px 0;
-            background-color: #1c1c36;
-        }
-
-        .footer-text {
-            font-size: 1.2rem;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-
-        .footer-links a {
-            color: #8080ff;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: #6666ff;
-        }
-
-        /* Additional Styling */
-        .btn-outline-primary {
-            color: #8080ff;
-            border-color: #8080ff;
-            transition: color 0.3s ease, border-color 0.3s ease;
-        }
-
-        .btn-outline-primary:hover {
-            color: #6666ff;
-            border-color: #6666ff;
-        }
-
-        .btn-primary {
-            background-color: #8080ff;
-            border-color: #8080ff;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #6666ff;
-            border-color: #6666ff;
-        }
-    </style>
-</head>
-<body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Aman Kumar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
+          <div class="nav-items">
+            <div>
+              <a href="#project">Project</a>
+            </div>
+            <div>
+              <a href="#skills">Skills</a>
+            </div>
+            <div>
+              <a href="#contactme">Contact Me</a>
+            </div>
+          </div>
         </div>
-    </div>
-</nav>
 
-<!-- Hero Section -->
-<section id="hero" class="hero-section text-center">
-    <div class="container">
-        <h1 class="hero-heading">Welcome to My Portfolio</h1>
-        <p class="hero-description">
-            I am a passionate web developer dedicated to creating exceptional digital experiences.
-        </p>
-        <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
-    </div>
-</section>
+        <div class="hero-section">
+          <div class="absolute faded-text">Aman Kumar</div>
+          <div class="hero-section-left">
+            <div class="hero-section-heading">Hi! Aman Kumar</div>
 
-<!-- About Section -->
-<section id="about" class="about-section">
-    <div class="container">
-        <h2 class="section-heading text-center mb-4">About Me</h2>
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <img src="images/profile-pic-removebg-preview (1).png" alt="Profile Picture"
-                     class="img-fluid rounded-circle">
+            <div class="hero-section-sub-heading">
+              I am a <span class="role"></span>
             </div>
-            <div class="col-md-6">
-                <p class="about-text">
-                    "I'm Aman Kumar, a dedicated software developer driven by a passion for innovation and
-                    problem-solving. With a strong background in computer science, I thrive on the challenges
-                    of crafting cutting-edge solutions and enhancing user experiences."
-                </p>
-                <h3 class="mt-4">Skills:</h3>
-                <ul class="skills-list">
-                    <li>Programming Languages: Python, HTML, CSS, JavaScript</li>
-                    <li>Web Development: Flask, Django, React</li>
-                    <li>Machine Learning: TensorFlow, Scikit-learn</li>
-                    <li>Version Control: Git</li>
-                    <li>Problem Solving, Teamwork, and Communication</li>
-                </ul>
+
+            <div class="hero-section-description">
+              I'm a software developer and here is my portfolio website. Here
+              you'll learn about my journey as a software developer.
             </div>
+
+            <div class="btn-pink" id="btn">
+              <a href="./CV_2023051810012164.pdf" download class="btn"
+                >Download Me <i class="fa fa-download"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="hero-section-right">
+            <div class="user-image">
+              <img
+                src="./images/WhatsApp Image 2023-07-09 at 11.01.25 AM.jpeg"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
 
-<!-- Projects Section -->
-<section id="projects" class="project-section">
-    <div class="container">
-        <h2 class="section-heading text-center mb-4">My Projects</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="images/Aichatbot.jpg" alt="Project 1" class="img-fluid">
-                    <h3 class="project-heading">AI Chatbot</h3>
-                    <p class="project-description">
-                        A chatbot built using natural language processing techniques to provide automated
-                        responses to user queries.
-                    </p>
-                    <a href="#" class="btn btn-outline-primary project-link">View Details <i
-                            class="fas fa-chevron-right"></i></a>
-                </div>
+      <div class="project-section" id="project">
+        <h2 class="page-header">Project</h2>
+
+        <div class="project-container">
+          <div class="project-card" id="project1">
+            <div class="project-number project-number-right">01</div>
+            <div class="project-content project-content-left">
+              <div class="project-skills-container">
+                <img
+                  class="project-skill"
+                  src="/images/assets (1)/html.png"
+                  alt=""
+                />
+                <img
+                  class="project-skill"
+                  src="/images/assets (1)/css.png"
+                  alt=""
+                />
+                <img
+                  class="project-skill"
+                  src="/images/assets (1)/js.svg"
+                  alt=""
+                />
+              </div>
+              <h2 class="project-heading">Resume Generator</h2>
+              <div class="project-subHead">
+                Build beautiful,resumes in a few clicks! Our resume builder
+                Sure!.“Developed a user-friendly resume builder using HTML, CSS,
+                and Java. The application allows users to easily input their
+                information and generate a professional-looking resume in
+                minutes.It easy for users to create a unique and personalized
+                resume that stands out to potential employers.”
+              </div>
+
+              <div class="btn-grp">
+                <button class="btn-pink btn-project">Read More</button>
+                <a href="">
+                  <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                </a>
+                <a href="">
+                  <i title="Live Link" class="fa-solid fa-link icon"></i>
+                </a>
+              </div>
             </div>
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="images/weatherapp.jpg" alt="Project 2" class="img-fluid">
-                    <h3 class="project-heading">Weather App</h3>
-                    <p class="project-description">
-                        A web application that fetches and displays current weather information based on user input.
-                    </p>
-                    <a href="#" class="btn btn-outline-primary project-link">View Details <i
-                            class="fas fa-chevron-right"></i></a>
-                </div>
+          </div>
+
+          <div class="project-card" id="project2">
+            <div class="project-number project-number-left">02</div>
+            <div class="project-content project-content-right">
+              <div class="project-skills-container">
+                <img
+                  class="project-skill"
+                  src="/images/assets (1)/html.png"
+                  alt=""
+                />
+                <img
+                  class="project-skill"
+                  src="/images/assets (1)/css.png"
+                  alt=""
+                />
+                <img
+                  class="project-skill"
+                  src="/images/assets (1)/js.svg"
+                  alt=""
+                />
+              </div>
+              <h2 class="project-heading">Tribute Webpage</h2>
+              <div class="project-subHead">
+                “Designed and developed a tribute website using HTML, CSS, and
+                JavaScript. The website features a visually appealing layout and
+                showcases the life and achievements of the individual being
+                honored. The site includes multimedia content such as images,
+                audio clips, as well as written biographical information."
+              </div>
+
+              <div class="btn-grp">
+                <button class="btn-pink btn-project">Read More</button>
+                <a href="">
+                  <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                </a>
+                <a href="">
+                  <i title="Live Link" class="fa-solid fa-link icon"></i>
+                </a>
+              </div>
             </div>
+          </div>
+          <div class="project-card" id="project3">
+            <div class="project-number project-number-right">03</div>
+            <div class="project-content project-content-left">
+              <div class="project-skills-container">
+                <img
+                  class="project-skill"
+                  src="/images/assets (1)/html.png"
+                  alt=""
+                />
+                <img
+                  class="project-skill"
+                  src="/images/assets (1)/css.png"
+                  alt=""
+                />
+                <img
+                  class="project-skill"
+                  src="/images/assets (1)/js.svg"
+                  alt=""
+                />
+              </div>
+              <h2 class="project-heading">Calculator</h2>
+              <p class="project-subHeading">
+                “Created a fully functional calculator using HTML, CSS, and
+                JavaScript. The calculator features a user-friendly interface
+                and supports basic arithmetic operations such as addition,
+                subtraction, multiplication, and division. The application is
+                designed to be intuitive and easy to use, allowing users to
+                quickly perform calculations with accuracy.”
+              </p>
+
+              <div class="btn-grp">
+                <button class="btn-pink btn-project">Read More</button>
+                <a href="">
+                  <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                </a>
+                <a href="">
+                  <i title="Live Link" class="fa-solid fa-link icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" id="project4">
+            <div class="project-number project-number-left">04</div>
+            <div class="project-content project-content-right">
+              <div class="project-skills-container">
+                <img
+                  class="project-skill"
+                  src="/images/assets (1)/html.png"
+                  alt=""
+                />
+                <img
+                  class="project-skill"
+                  src="/images/assets (1)/css.png"
+                  alt=""
+                />
+              </div>
+              <h2 class="project-heading">Portfolio</h2>
+              <div class="project-subHead">
+                “Created a professional portfolio website using HTML and CSS.
+                The website showcases my skills, experience, and projects in a
+                visually appealing and organized manner. The site is fully
+                responsive and features a clean and modern design, making it
+                easy for potential employers or clients to learn more about my
+                work and capabilities.”
+              </div>
+
+              <div class="btn-grp">
+                <button class="btn-pink btn-project">Read More</button>
+                <a href="">
+                  <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                </a>
+                <a href="">
+                  <i title="Live Link" class="fa-solid fa-link icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="images/apiintegrations.jpg" alt="Project 3" class="img-fluid">
-                    <h3 class="project-heading">API Integration</h3>
-                    <p class="project-description">
-                        An application that integrates with various APIs to provide useful functionalities such as
-                        fetching data from external sources.
-                    </p>
-                    <a href="#" class="btn btn-outline-primary project-link">View Details <i
-                            class="fas fa-chevron-right"></i></a>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="images/machine learning.jpg" alt="Project 4" class="img-fluid">
-                    <h3 class="project-heading">Machine Learning Model</h3>
-                    <p class="project-description">
-                        A machine learning model developed using TensorFlow and Scikit-learn for solving a specific
-                        problem or task.
-                    </p>
-                    <a href="#" class="btn btn-outline-primary project-link">View Details <i
-                            class="fas fa-chevron-right"></i></a>
-                </div>
-            </div>
+      </div>
+
+      <div id="skills" class="container skills-container">
+        <div class="skill-fade-text">Skills</div>
+
+        <div class="skill-container-left">
+          <h2 class="skill-heading">
+            <span class="caps">M</span>e and <br />
+            MyTech Stack
+          </h2>
+
+          <div class="skill-subHeading">
+            <p>
+              Hi! Everyone My Name is Aman Kumar. I am a MERN stack
+              developer,(MongoDB,Express js,React js,Node js,)
+              (HTML,Tailwind,CSS)
+            </p>
+          </div>
         </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact-section">
-    <div class="container">
-        <h2 class="section-heading text-center">Contact Me</h2>
-        <p class="section-description text-center">
-            I'm excited to hear from you! Drop me a message and I'll get back to you as soon as possible.
-        </p>
-        <form id="contact-form" class="contact-form">
-            <div class="row">
-                <div class="col-md-6 mx-auto">
-                    <input type="text" class="form-control mb-3" id="name" placeholder="Your Name">
-                </div>
-                <div class="col-md-6 mx-auto">
-                    <input type="email" class="form-control mb-3" id="email" placeholder="Your Email">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 mx-auto">
-                    <textarea class="form-control mb-3" id="message" rows="5" placeholder="Your Message"></textarea>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 mx-auto">
-                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</section>
-
-<!-- Footer Section -->
-<footer class="footer-section">
-    <div class="container">
-        <p class="footer-text text-center">Connect with Me</p>
-        <div class="footer-links text-center">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="skill-container-right">
+          <img
+            src="./images/assets (1)/asset 17.png"
+            alt=""
+            class="blob-style"
+          />
+          <img src="./images/assets (1)/html.png" alt="" class="skills-logo" />
+          <img src="./images/assets (1)/css.png" alt="" class="skills-logo" />
+          <img
+            src="./images/assets (1)/tailwind.png"
+            alt=""
+            class="skills-logo"
+          />
+          <img src="./images/assets (1)/js.svg" alt="" class="skills-logo" />
+          <img src="./images/assets (1)/react.png" alt="" class="skills-logo" />
+          <img
+            src="./images/assets (1)/node.js.svg"
+            alt=""
+            class="skills-logo"
+          />
+          <img
+            src="./images/assets (1)/express.png"
+            alt=""
+            class="skills-logo"
+          />
+          <img src="./images/assets (1)/mongo.svg" alt="" class="skills-logo" />
         </div>
-    </div>
-</footer>
+      </div>
+      <div class="contactus-form-container" id="contactme">
+        <div class="container">
+          <h1 class="contactus-heading">Contact me</h1>
+          <h3 class="contactus-sub-heading">
+            Questions, Thoughts, Or Just Want To Say Hello?
+          </h3>
 
-<!-- Font Awesome -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-<!-- Bootstrap JS and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- Custom JavaScript -->
-<script src="script.js"></script>
-</body>
+          <div class="contactus-form-container">
+            <form class="form" action="">
+              <div class="formfield-container">
+                <input
+                  class="formfield"
+                  type="text"
+                  name="name"
+                  id=""
+                  placeholder="Enter your name"
+                />
+
+                <input
+                  class="formfield"
+                  type="email"
+                  name="email"
+                  id=""
+                  placeholder="Enter your email address"
+                />
+
+                <input
+                  class="formfield"
+                  type="text"
+                  name="subject"
+                  id=""
+                  placeholder="Enter your subject"
+                />
+
+                <textarea
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  class="formfield formfield-textarea"
+                  placeholder="Enter your message"
+                ></textarea>
+              </div>
+              <div>
+                <button type="submit" class="btn-pink" id="submit-btn">
+                  Send Message<i class="submit-icon fa-solid fa-paper-plane">
+                  </i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container">
+          <div class="footer-wrapper">
+            <div class="footer-faded-text">Aman Kumar</div>
+            <div class="link-wrapper">
+              <div>
+                <a href="#project">Project</a>
+              </div>
+              <div>
+                <a href="#skills">Skills</a>
+              </div>
+              <div>
+                <a href="#contactme">Contact Me</a>
+              </div>
+            </div>
+            <div class="icon-wrapper">
+              <a href="https://www.linkedin.com/in/aman-kumar-here-for-you/">
+                <i class="fa-brands fa-linkedin icon"> </i
+              ></a>
+              <a href="https://github.com/Amankumaraman">
+                <i class="fa-brands fa-github icon"></i>
+              </a>
+              <a href="https://twitter.com/amanking177">
+                <i class="fa-brands fa-twitter icon"></i>
+              </a>
+              <a
+                href="https://instagram.com/mr_rider_ak?igshid=MzNlNGNkZWQ4Mg=="
+              >
+                <i class="fa-brands fa-instagram icon"></i>
+              </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=amanking177@gmail.com"
+              >
+                <i class="fa-regular fa-envelope icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script
+      src="https://kit.fontawesome.com/58a810656e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var typeData = new Typed(".role", {
+        strings: ["Web Developer", "Front-End Developer", "Back-End Developer"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true,
+      });
+    </script>
+  </body>
 </html>
